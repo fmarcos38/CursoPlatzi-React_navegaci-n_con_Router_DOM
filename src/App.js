@@ -20,8 +20,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           
-          {/* ruta anidada */} {/* no ac falta al hijo colocarle la ruta del padre */}
+          {/* ruta anidada */} 
           <Route path="/blog" element={<BlogPage />}>
+            {/* no ac falta al hijo colocarle la ruta del padre ATENTTO al / del hijo NO va*/}
             <Route path=":slug" element={<BlogPost />} /> {/* ruta dinámica */}
           </Route>
           
